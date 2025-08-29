@@ -4,6 +4,7 @@ import { VitePWA } from "vite-plugin-pwa";
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
+    base: "/number-cards-pwa/",
     plugins: [
         tailwindcss(),
         react(),
