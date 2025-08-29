@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+    // GitHub Pages project path
     base: "/number-cards-pwa/",
     plugins: [
         tailwindcss(),
@@ -18,7 +19,12 @@ export default defineConfig({
                 theme_color: "#111827",
                 background_color: "#111827",
                 display: "standalone",
-                start_url: "/",
+
+                // Relative so iOS anchors to the subfolder
+                id: "./",
+                start_url: "./",
+                scope: "./",
+
                 icons: [
                     {
                         src: "icons/icon-192.png",
