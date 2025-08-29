@@ -24,7 +24,7 @@ export default function ResultPanel({
             <div className="mt-5">
                 <button
                     onClick={onRestart}
-                    className="rounded-2xl px-4 py-2 bg-indigo-600 hover:bg-indigo-500 cursor-pointer"
+                    className="rounded-lg px-4 py-2 bg-indigo-600 hover:bg-indigo-500 cursor-pointer w-full"
                 >
                     Play again
                 </button>
