@@ -1,69 +1,106 @@
-# React + TypeScript + Vite
+# 🃏 Number Cards (PWA)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📖 Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [🃏 Number Cards (PWA)](#-number-cards-pwa)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [🤓 Overview](#-overview)
+  - [📦 Installation](#-installation)
+    - [Notes](#notes)
+  - [🚀 Scripts \& Usage](#-scripts--usage)
+  - [📁 Project Structure](#-project-structure)
+  - [✍️ Code Style \& Linting](#️-code-style--linting)
+  - [👤 Author](#-author)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🤓 Overview
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+A tiny, offline-first number-guessing game built with React, TypeScript, and Tailwind CSS.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+The idea came from a Christmas cracker game (Christmas 2023) and has been recreated in code.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Pick a secret number (default range 1–63). For each "card", answer **Yes/No** to "Is your number on this card?". At the end, the app sums the values of the cards you said **Yes** to — that total is your number.
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Karl-Horning/number-cards-pwa.git
+cd number-cards-pwa
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Notes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Tailwind v4 via the Vite plugin:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  ```ts
+  // vite.config.ts
+  import { defineConfig } from "vite";
+  import react from "@vitejs/plugin-react";
+  import tailwindcss from "@tailwindcss/vite";
+  export default defineConfig({ plugins: [react(), tailwindcss()] });
+  ```
+
+- PWA via `vite-plugin-pwa`:
+
+  - Ensure it’s added in `vite.config.ts`.
+  - For TypeScript, include the client types:
+
+    ```ts
+    /// <reference types="vite/client" />
+    /// <reference types="vite-plugin-pwa/client" />
+    ```
+
+---
+
+## 🚀 Scripts & Usage
+
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start local development server       |
+| `npm run build`   | Build production assets              |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint`    | Run ESLint checks (if configured)    |
+
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+├── components/
+│   ├── AnswerButtons.tsx
+│   ├── CardGrid.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── HowItWorks.tsx
+│   ├── InstallHint.tsx
+│   └── ResultPanel.tsx
+├── hooks/
+│   └── useNumberTrick.ts
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
+
+---
+
+## ✍️ Code Style & Linting
+
+This project uses:
+
+- **ESLint** (TypeScript rules recommended)
+- **Prettier** with the **Tailwind plugin**
+- **Conventional Commits** (with extra types such as `a11y`, `ux`, etc.)
+
+---
+
+## 👤 Author
+
+Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
