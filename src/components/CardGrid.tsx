@@ -19,7 +19,7 @@ export default function CardGrid({
             className="mt-4 grid grid-cols-8 gap-2 text-center"
         >
             {numbers.map((n) => (
-                <span key={n} className="bg-gray-700 rounded-lg py-1">
+                <span key={n} className="rounded-lg bg-gray-700 py-1">
                     {n}
                 </span>
             ))}

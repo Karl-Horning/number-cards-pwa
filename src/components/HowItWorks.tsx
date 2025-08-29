@@ -6,7 +6,7 @@
 export default function HowItWorks() {
     return (
         <details className="ml-0">
-            <summary className="cursor-pointer select-none underline">
+            <summary className="cursor-pointer underline select-none">
                 How it works
             </summary>
             <p className="mt-2 text-gray-300">

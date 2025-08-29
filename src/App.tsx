@@ -29,11 +29,11 @@ export default function App() {
     }, [deck, step, totalSteps]);
 
     return (
-        <main className="min-h-screen bg-gray-900 text-white p-6">
+        <main className="min-h-screen bg-gray-900 p-6 text-white">
             <div className="mx-auto max-w-3xl">
                 <Header />
 
-                <section className="bg-gray-800 rounded-2xl p-5 shadow-lg">
+                <section className="rounded-2xl bg-gray-800 p-5 shadow-lg">
                     <p className="text-gray-300">
                         Pick a number from 1 to {max}. Keep it secret.
                     </p>

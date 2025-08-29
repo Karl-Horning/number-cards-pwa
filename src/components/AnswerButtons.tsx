@@ -13,16 +13,16 @@ export default function AnswerButtons({
     onNo: () => void;
 }) {
     return (
-        <div className="mt-5 flex gap-3 flex-col md:flex-row">
+        <div className="mt-5 flex flex-col gap-3 md:flex-row">
             <button
                 onClick={onYes}
-                className="rounded-lg px-4 py-2 bg-emerald-700 hover:bg-emerald-500 cursor-pointer w-full"
+                className="w-full cursor-pointer rounded-lg bg-emerald-700 px-4 py-2 hover:bg-emerald-500"
             >
                 Yes
             </button>
             <button
                 onClick={onNo}
-                className="rounded-lg px-4 py-2 bg-rose-600 hover:bg-rose-500 cursor-pointer w-full"
+                className="w-full cursor-pointer rounded-lg bg-rose-600 px-4 py-2 hover:bg-rose-500"
             >
                 No
             </button>
