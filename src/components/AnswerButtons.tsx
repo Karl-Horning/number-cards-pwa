@@ -16,7 +16,7 @@ export default function AnswerButtons({
         <div className="mt-5 flex gap-3 flex-col md:flex-row">
             <button
                 onClick={onYes}
-                className="rounded-lg px-4 py-2 bg-emerald-600 hover:bg-emerald-500 cursor-pointer w-full"
+                className="rounded-lg px-4 py-2 bg-emerald-700 hover:bg-emerald-500 cursor-pointer w-full"
             >
                 Yes
             </button>

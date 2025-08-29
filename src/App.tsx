@@ -56,7 +56,7 @@ export default function App() {
                                 className="mt-4 w-full"
                                 value={step - 1}
                                 max={totalSteps}
-                                aria-label="Progress"
+                                aria-hidden="true"
                             />
                         </>
                     ) : (
