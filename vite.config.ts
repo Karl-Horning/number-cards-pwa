@@ -14,7 +14,7 @@ export default defineConfig({
             includeAssets: ["icons/icon-192.png", "icons/icon-512.png"],
             manifest: {
                 name: "Number Cards",
-                short_name: "Cards",
+                short_name: "Number Cards",
                 description: "Guess-my-number cards (1-63) as a tiny PWA.",
                 theme_color: "#111827",
                 background_color: "#111827",
