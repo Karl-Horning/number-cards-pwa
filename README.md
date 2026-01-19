@@ -1,22 +1,22 @@
-# 🃏 Number Cards (PWA)
+# Number Cards (PWA)
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
-- [🃏 Number Cards (PWA)](#-number-cards-pwa)
-  - [📖 Table of Contents](#-table-of-contents)
-  - [🤓 Overview](#-overview)
-  - [📦 Installation](#-installation)
+- [Number Cards (PWA)](#number-cards-pwa)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Installation](#installation)
     - [Notes](#notes)
-  - [🚀 Scripts \& Usage](#-scripts--usage)
-  - [📁 Project Structure](#-project-structure)
-  - [✍️ Code Style \& Linting](#️-code-style--linting)
-  - [👤 Author](#-author)
+  - [Scripts \& Usage](#scripts--usage)
+  - [Project Structure](#project-structure)
+  - [Code Style \& Linting](#code-style--linting)
+  - [Author](#author)
 
 ---
 
-## 🤓 Overview
+## Overview
 
 A tiny, offline-first number-guessing game built with React, TypeScript, and Tailwind CSS.
 
@@ -26,7 +26,7 @@ Pick a secret number (default range 1–63). For each "card", answer **Yes/No** 
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 git clone https://github.com/Karl-Horning/number-cards-pwa.git
@@ -59,7 +59,7 @@ npm run dev
 
 ---
 
-## 🚀 Scripts & Usage
+## Scripts & Usage
 
 | Command           | Description                          |
 | ----------------- | ------------------------------------ |
@@ -70,7 +70,7 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 src/
@@ -91,7 +91,7 @@ src/
 
 ---
 
-## ✍️ Code Style & Linting
+## Code Style & Linting
 
 This project uses:
 
@@ -101,6 +101,6 @@ This project uses:
 
 ---
 
-## 👤 Author
+## Author
 
 Made with ❤️ by [Karl Horning](https://github.com/Karl-Horning)
