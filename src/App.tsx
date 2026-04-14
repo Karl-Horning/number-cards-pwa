@@ -25,7 +25,7 @@ export default function App() {
     /** Numbers to display for the current card; empty once finished. */
     const numbers = useMemo(() => {
         if (step > totalSteps) return [];
-        return deck[`card${step}`].slice();
+        return deck[`card${step}`];
     }, [deck, step, totalSteps]);
 
     return (
