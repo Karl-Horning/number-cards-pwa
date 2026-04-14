@@ -46,10 +46,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer
-            id="footer"
-            className="border-t border-slate-200 py-10 text-center text-slate-600 dark:border-slate-800 dark:text-slate-400"
-        >
+        <footer className="border-t border-slate-200 py-10 text-center text-slate-600 dark:border-slate-800 dark:text-slate-400">
             <div className="mx-auto flex max-w-6xl flex-col items-center justify-between px-6 md:flex-row">
                 <p className="text-sm" aria-label="Copyright notice">
                     &copy; {year} Made with ❤️ by{" "}
