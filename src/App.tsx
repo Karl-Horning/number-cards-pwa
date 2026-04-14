@@ -38,7 +38,13 @@ export default function App() {
                         Pick a number from 1 to {max}. Keep it secret.
                     </p>
 
-                    {result === null ? (
+                    <div aria-live="polite" aria-atomic="true">
+                        {result !== null && (
+                            <ResultPanel result={result} onRestart={restart} />
+                        )}
+                    </div>
+
+                    {result === null && (
                         <>
                             <h2 className="mt-4 text-xl font-semibold">
                                 Step {step} of {totalSteps}
@@ -59,8 +65,6 @@ export default function App() {
                                 aria-hidden="true"
                             />
                         </>
-                    ) : (
-                        <ResultPanel result={result} onRestart={restart} />
                     )}
                 </section>
 
