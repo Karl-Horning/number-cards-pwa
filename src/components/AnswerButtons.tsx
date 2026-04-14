@@ -17,12 +17,14 @@ export default function AnswerButtons({
             <button
                 onClick={onYes}
                 className="w-full cursor-pointer rounded-lg bg-emerald-700 px-4 py-2 hover:bg-emerald-500"
+                type="button"
             >
                 Yes
             </button>
             <button
                 onClick={onNo}
                 className="w-full cursor-pointer rounded-lg bg-rose-600 px-4 py-2 hover:bg-rose-500"
+                type="button"
             >
                 No
             </button>
