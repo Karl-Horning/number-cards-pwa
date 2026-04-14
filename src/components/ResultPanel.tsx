@@ -16,8 +16,7 @@ export default function ResultPanel({
 }) {
     return (
         <>
-            {/* Live region so screen readers announce the result */}
-            <h2 className="mt-4 text-3xl font-bold" aria-live="polite">
+            <h2 className="mt-4 text-3xl font-bold">
                 Your number is: {result}
             </h2>
 
