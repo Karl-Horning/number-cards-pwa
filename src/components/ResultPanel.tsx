@@ -24,6 +24,7 @@ export default function ResultPanel({
                 <button
                     onClick={onRestart}
                     className="w-full cursor-pointer rounded-lg bg-indigo-600 px-4 py-2 hover:bg-indigo-500"
+                    type="button"
                 >
                     Play again
                 </button>
